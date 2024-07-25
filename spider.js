@@ -439,8 +439,8 @@ console.error(err)
 }
 //=================================================//
 const nulll = fs.readFileSync(`./image/nulll.jpg`)
-const nulll2 = fs.readFileSync(`./image/nulll2.jpg`)
-const mengkece = fs.readFileSync(`./image/mengkece.jpg`)
+const nulll2 = fs.readFileSync(`./image/nulll.jpg`)
+const mengkece = fs.readFileSync(`./image/nulll.jpg`)
 const latx = fs.readFileSync(`./image/latx.png`)
 const fakedoc = fs.readFileSync(`./src/bruhhh.apk`)
 const fakejpg = fs.readFileSync(`./src/bruhhh.jpg`)
@@ -479,7 +479,7 @@ if (db.data.settings[botNumber].autobio) {
 let setting = db.data.settings[botNumber]
 if (new Date() * 1 - setting.status > 1000) {
 let uptime = await runtime(process.uptime())
-await ryozingod.updateProfileStatus(`✳️ SpiderV600 -  Client By : Taira Makino || ✅ Runtime : ${uptime}`)
+await ryozingod.updateProfileStatus(`✳️ SpiderV600 -  By : Taira Makino || ✅ Runtime : ${uptime}`)
 setting.status = new Date() * 1
 }
 }
@@ -1494,9 +1494,6 @@ let penisbengkok = `
 ◈ Mode : ${ryozingod.public ? '✱ Public ༣' : '✲ Self ༣'}
 ◈ User : ${Object.keys(db.data.users).length}
 ◈ Prefix : Multi
-
-    
-𝕶𝖎𝖓𝖌 𝕾𝖆𝖒 © Copyright
 `
 
 let njing = `
@@ -1514,10 +1511,10 @@ let njing = `
 ◈ Prefix : Multi
 
 
-🩸${prefix}virusmenu
-🩸${prefix}allmenu
-🩸${prefix}changemenu button/non
-🩸${prefix}owner
+⚠️${prefix}virusmenu
+⚠️${prefix}allmenu
+⚠️${prefix}changemenu button/non
+⚠️${prefix}owner
 
 
 > Taira Makino
@@ -1551,7 +1548,7 @@ interactiveMessage: {
 "buttons": [
 {
 "name": "single_select",
-"buttonParamsJson": `{ "title": "⿻𝕶𝖎𝖓𝖌 𝕾𝖆𝖒⿻", "sections": [{ "title": "# !-Choose One Of Them", "highlight_label": "🌏General Commands🗨️", "rows": [{ "header": "ALL COMMAND", "title": "Show All Command", "id": ".allmenu" }, { "header": "Owner", "title": "Displays Owner Number", "id": ".owner" }, { "header": "Bot Info", "title": "Displays Information About Bots", "id": ".botstatus" }] }, { "title": "🦠 SpeCiaL - ComManD ❌", "highlight_label": " #SpeCial ", "rows": [{ "header": "bugl - Menu", "title": "displays all special commands", "id": ".virusmenu" }] }] }`
+"buttonParamsJson": `{ "title": "⿻ᴛᴀɪʀᴀ ᴍᴀᴋɪɴᴏ⿻", "sections": [{ "title": "# !-Choose One Of Them", "highlight_label": "🌏General Commands🗨️", "rows": [{ "header": "ALL COMMAND", "title": "Show All Command", "id": ".allmenu" }, { "header": "Owner", "title": "Displays Owner Number", "id": ".owner" }, { "header": "Bot Info", "title": "Displays Information About Bots", "id": ".botstatus" }] }, { "title": "🦠 SpeCiaL - ComManD ❌", "highlight_label": " #SpeCial ", "rows": [{ "header": "bugl - Menu", "title": "displays all special commands", "id": ".virusmenu" }] }] }`
 },
 {
 "name": "cta_url",
@@ -1669,6 +1666,42 @@ let itsmenu = `
 ◈ ${prefix}antilinktiktok on / off
 ◈ ${prefix}antilinktwitter on / off
 ◈ ${prefix}antilink on / off
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+      *BUGS*
+    
+◈ ${prefix}bug-button link group
+◈ ${prefix}bug-browser link group
+◈ ${prefix}bug-gc 120###@g.us
+◈ ${prefix}night-night amount pc/gc
+◈ ${prefix}penis amount pc/gc
+◈ ${prefix}penis2 amount pc/gc
+◈ ${prefix}penis2 amount pc/gc
+◈ ${prefix}bgtes amount pc/gc
+◈ ${prefix}stardust 254####
+◈ ${prefix}st4rdust 254####
+◈ ${prefix}restart-ui 254####
+◈ ${prefix}spdr 2548###
+◈ ${prefix}sam-did pc/gc
+◈ ${prefix}senggol pc/gc
+◈ ${prefix}null-chace amount  pc/gc
+◈ ${prefix}bug pc/gc
+◈ ${prefix}ltest pc/gc
+◈ ${prefix}ma-gic 2548###
+◈ ${prefix}sor-ry 2548###|#
+◈ ${prefix}bug-penis pc/gc
+◈ ${prefix}suck-it 2548###|#
+◈ ${prefix}bug-24j 2548###
+◈ ${prefix}brutal-bug 2548###
+◈ ${prefix}samsung-chace 2548###
+◈ ${prefix}samsun 2548###
+◈ ${prefix}vios-unli 2548###
+◈ ${prefix}dead-ios 2548###
+◈ ${prefix}ios-try 2548#|amount
+◈ ${prefix}bug-ios 2548#|amount
+
+ ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
 
 `
 let msg = {
@@ -1937,7 +1970,7 @@ case 'ping': {
         key: pingMsg.key,
         type: 14,
         editedMessage: {
-          conversation: `* sᵖⁱᵈᵉʳ ᴠ600 sᵖᵉᵉᵈ ➟* *${new Date() - startTime}* 𝙼𝚂`
+          conversation: `*sᵖⁱᵈᵉʳ ᴠ600 sᵖᵉᵉᵈ ➟ ${new Date() - startTime}* 𝙼𝚂`
         }
       }
     }, {});
@@ -1945,11 +1978,11 @@ case 'ping': {
 break;
 
 case 'bug':{
-ryozingod.sendMessage(m.chat, { text: `night-night`}, { quoted: ryobug })
-ryozingod.sendMessage(m.chat, { text: `night-night`}, { quoted: ryobug }) 
-ryozingod.sendMessage(m.chat, { text: `night-night`}, { quoted: ryobug })
-ryozingod.sendMessage(m.chat, { text: `night-night`}, { quoted: ryobug })
-ryozingod.sendMessage(m.chat, { text: `night-night`}, { quoted: ryobug })
+ryozingod.sendMessage(m.chat, { text: `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`}, { quoted: ryobug })
+ryozingod.sendMessage(m.chat, { text: `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`}, { quoted: ryobug }) 
+ryozingod.sendMessage(m.chat, { text: `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`}, { quoted: ryobug })
+ryozingod.sendMessage(m.chat, { text: `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`}, { quoted: ryobug })
+ryozingod.sendMessage(m.chat, { text: `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`}, { quoted: ryobug })
 ryozingod.sendMessage(m.chat, { text: `🖕🖕`}, { quoted: ryobug })
 }
 break
