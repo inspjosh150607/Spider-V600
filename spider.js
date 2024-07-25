@@ -4035,12 +4035,12 @@ if (stdout) return joreply(`${stdout}`)
 }
 } catch (err) {
 peki = async () => {
-ryozingod.sendMessage(global.ownMain + '@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m})
-await sleep(1000)
-m.reply(`
-❌ Eror Ditemukan. Eror Succes Dilaporkan Ke Contributor Bot, Mohon Tunggu Beberapa Waktu Sampai Owner Memperbaiki Eror Tersebut ✅
+//ryozingod.sendMessage(global.ownMain + '@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m})
+//await sleep(1000)
+//m.reply(`
+//❌ Eror Ditemukan. Eror Succes Dilaporkan Ke Contributor Bot, Mohon Tunggu Beberapa Waktu Sampai Owner Memperbaiki Eror Tersebut ✅
 
-${util.format(err)}`)
+//${util.format(err)}`)
 console.log(util.format(err))
 }
 peki()
