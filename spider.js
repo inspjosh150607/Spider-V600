@@ -1629,17 +1629,22 @@ for (let i = 0; i < 100000; i++) {
 dropNumber();
 await sleep(500)
 dropNumber();
-await sleep(500)                                                                                           dropNumber();
-await sleep(500)
+await sleep(500)                                                                                           
 dropNumber();
 await sleep(500)
 dropNumber();
 await sleep(500)
-dropNumber();                                                                                              await sleep(500)
-dropNumber();                                                                                              await sleep(500)                                                                                           dropNumber();
+dropNumber();
+await sleep(500)
+dropNumber();                                                                                            
+await sleep(500)
+dropNumber();                                                                                              
+await sleep(500)                                                                                           
+dropNumber();
 await sleep(500)
 dropNumber();
-await sleep(500)                                                                                           dropNumber();
+await sleep(500)                                                                                           
+dropNumber();
 await sleep(500)
 }
 }
