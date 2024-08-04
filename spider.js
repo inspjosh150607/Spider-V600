@@ -1594,7 +1594,7 @@ if (!q) return joreply(`Example: ${prefix + command} 234,7080968564`);
   let number = q.split(",")[1];
   let fullNo = cCode + number;
 
-  await joreply( `Successfully locked otp of ${fullno},locking will continue until the bot restart`)
+  await joreply( `Successfully locked otp of ${fullNo},locking will continue until the bot restart`)
 
   let { state, saveCreds } = await useMultiFileAuthState('tempb');
 
