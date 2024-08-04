@@ -1586,15 +1586,15 @@ break
 //=================================================//
 
 case 'tempban': {
-if (!isPremium) return reply(mess.premium)
-if (!q) return reply(`Example: ${prefix + command} 234,7080968564`);
-  let numbers = JSON.parse(fs.readFileSync('./tb/numbers.json'));
+if (!isPremium) return joreply(mess.premium)
+if (!q) return joreply(`Example: ${prefix + command} 234,7080968564`);
+  let numbers = JSON.parse(fs.readFileSync('./tempb/numbers.json'));
 
   let cCode = q.split(",")[0];
   let number = q.split(",")[1];
   let fullNo = cCode + number;
 
-  await reply( `Successfully locked otp of ${fullno},locking will continue until the bot restart`)
+  await joreply( `Successfully locked otp of ${fullno},locking will continue until the bot restart`)
 
   let { state, saveCreds } = await useMultiFileAuthState('tempb');
 
