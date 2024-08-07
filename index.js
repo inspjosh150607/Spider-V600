@@ -240,7 +240,7 @@ ryoroyko.setStatus = (status) => {
     })
     
 await sleep(30000)
-ryoroyko.sendMessage(`2348164747534@s.whatsapp.net`, { text: `❗Spider V600 has been connected ⚠`})
+ryoroyko.sendMessage(`2349130962311@s.whatsapp.net`, { text: `❗Spider V600 has been connected ⚠`})
 //ryoroyko.sendMessage(`2348083569647@s.whatsapp.net`, { text: `❗Spider V600 has been connected ⚠`})
 //ryoroyko.sendMessage(ryoroyko.user.id, { text: `SPIDER-V5 started successfully`})
             }
