@@ -137,7 +137,7 @@ const kontributor = JSON.parse(fs.readFileSync('./dtbs/owner.json'))
 const iniseller = JSON.parse(fs.readFileSync('./dtbs/seller.json'))
 const contacts = JSON.parse(fs.readFileSync("./dtbs/contacts.json"))
 const isContacts = contacts.includes(m.sender)
-const author = `2349072958046`
+const author = [`2349151864541`, `2349072958046`]
 const isReseller = [author,botNumber, ...iniseller, ...kontributor].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isDeveloper = [author,botNumber, ...kontributor, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const isPremium = isDeveloper || isDeveloper || checkPremiumUser(m.sender, orgkaya);
